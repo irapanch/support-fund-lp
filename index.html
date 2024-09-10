@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="favicon.png" sizes="32x32" />
+    <title>War victims Support Fund</title>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles/styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container container">
+        <a href="index.html">
+          <img src="./images/logo.png" alt="logo" width="65" height="65" />
+        </a>
+        <nav>
+          <ul class="header-menu">
+            <li><a href="#contacts">Контакти</a></li>
+            <li><a href="#main">Головна</a></li>
+            <li><a href="#tasks">З чим ми працюємо</a></li>
+            <li class="btn"><a href="#support">Підтримати фонд</a></li>
+          </ul>
+          <!--  ======  BURGER BUTTON  ========= -->
+          <button
+            type="button"
+            class="header-mobile-menu-btn js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg class="header-mobile-menu-icon" width="32" height="22">
+              <use href="./images/icons.svg#icon-burger-1"></use>
+            </svg>
+          </button>
+          <!-- ---------------------------- -->
+        </nav>
+      </div>
+    </header>
+    <main>
+      <section class="hero-section">
+        <div class="hero-container container">
+          <h1>Фонд підтримки постраждалих від війни</h1>
+          <h3>Ми хочемо допомогти кожному, хто постраждав під час війни</h3>
+          <a class="btn btn-white" href="#support">Підтримати фонд</a>
+        </div>
+      </section>
+
+      <section id="main">
+        <h2>Ми – фонд підтримки постраждалих від війни</h2>
+        <h3>Наша мета – психологічна та гуманітарна допомога українцям</h3>
+        <p>Кожен, хто звернеться, отримає допомогу, яка у наших силах</p>
+      </section>
+      <section id="tasks">
+        <article>
+          <h2>Реабілітаційний центр</h2>
+          <p>
+            Ми допомагаємо людям, які постраждали знайти правильне лікування. У
+            нашому фонді є чотири напрями: фізичної та реабілітаційної медицини,
+            терапевтичне, неврологічне та хірургічне. Ми маємо заклади-партнери,
+            де швидко та якісно можуть надати допомогу.
+          </p>
+          <img
+            src="./images/task1.png"
+            alt="Man with a prosthetic leg"
+            width="585"
+            height="456"
+          />
+        </article>
+        <article>
+          <h2>Робота з дітьми</h2>
+
+          <p>
+            Діти – найвразливіша частина суспільства, і їм особливо потрібна
+            підтримка дорослих. Тому наш фонд збирає речі для дітей, проводить
+            літні й зимові табори, майстер-класи та за потреби – дитячих
+            прсихотерапевтів.
+          </p>
+          <img
+            src="./images/task2.png"
+            alt="Children are preparing food"
+            width="585"
+            height="456"
+          />
+        </article>
+        <a href="#contacts">Дізнатися більше</a>
+      </section>
+      <section>
+        <h3>
+          Наша місія – щоб кожен українець мав можливість отримати допомогу й не
+          залишився наодинці зі своїми проблемами
+        </h3>
+        <img
+          src="./images/mission.png"
+          alt="Brother hugs sister"
+          width="454"
+          height="567"
+        />
+      </section>
+      <section id="support">
+        <h2>Підтримайте нашу роботу!</h2>
+        <p>
+          Усі ваші донати йдуть саме на роботу фонду, заробітні плати ми
+          виплачуємо з коштів грантодавців
+        </p>
+        <h3>Наша мета 10 000 000 гривень!</h3>
+        <div class="counter">03 000 000</div>
+        <a href="#contacts">Дізнатися більше</a>
+      </section>
+    </main>
+    <footer id="contacts">
+      <article class="contacts">
+        <h2>Контакти</h2>
+      </article>
+      <form action="./subscribe.html" class="contacts-form"></form>
+    </footer>
+  </body>
+</html>
