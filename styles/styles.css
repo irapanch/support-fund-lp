@@ -37,7 +37,6 @@ button {
 }
 .container {
   max-width: 1440px;
-  outline: 1px solid red;
 }
 .btn {
   display: inline-block;
@@ -52,18 +51,17 @@ button {
 }
 .btn-white {
   display: inline-block;
-  max-width: 100%;
   background-color: #fff;
 }
 .subtitle {
-  font-size: 2em;
+  font-size: 1.6em;
   letter-spacing: -0.07em;
   text-transform: uppercase;
   margin-bottom: 0.3em;
 }
 
 .description {
-  font-size: 1.69em;
+  font-size: 1.1em;
   padding-bottom: 0.37em;
 }
 
@@ -131,6 +129,7 @@ button {
 }
 .task-container article {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 4.1vw;
   background: #f1fdff;
@@ -139,6 +138,8 @@ button {
 }
 .task-container img {
   border-radius: 0.63em;
+  width: 100%;
+  height: auto;
 }
 .task-container a {
   display: block;
@@ -146,7 +147,7 @@ button {
   width: 16.3rem;
 }
 .task-wrap h2 {
-  font-size: 2.88em;
+  font-size: 2em;
   letter-spacing: -0.06em;
   text-transform: uppercase;
   margin-bottom: 0.22em;
@@ -174,16 +175,11 @@ button {
 }
 .mission-image {
   width: 100%;
+  max-width: 454px;
   height: auto;
 }
 .mission-bg {
-  position: absolute;
-  left: -70px;
-  bottom: 35px;
-  z-index: -1;
-
-  height: auto;
-  max-width: 715px;
+  display: none;
 }
 
 /* ----support---- */
@@ -197,7 +193,7 @@ button {
   width: 100%;
   max-width: 320px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1rem;
   margin: auto;
   margin-top: 0.4em;
@@ -219,29 +215,31 @@ footer {
 }
 .contacts {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   gap: 5vw;
   margin-bottom: 3vw;
-}
-.contacts h2,
-.contacts-wrap {
-  width: 40%;
 }
 
 .contacts-wrap {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 3vw;
+  gap: 13vw;
   font-size: 1.25em;
+}
+.footer-form img {
+  display: none;
 }
 .footer-form {
   padding: 3vw;
   background-color: #fff;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   gap: 6vw;
 }
+
 .contacts-form {
   display: flex;
   flex-direction: column;
@@ -254,9 +252,7 @@ footer {
   text-align: left;
   border: none;
 }
-.form-container {
-  width: 40%;
-}
+
 .form-container h3 {
   font-size: 1.68em;
   margin-bottom: 3vw;
@@ -289,10 +285,14 @@ footer {
     margin: 0;
   }
 }
+
 @media screen and (min-width: 768px) {
   h1 {
     font-size: 3.93em;
     font-weight: 800;
+  }
+  .btn-white {
+    max-width: 100%;
   }
   .header-mobile-menu-btn {
     display: none;
@@ -311,6 +311,69 @@ footer {
   .subtitle {
     font-size: 3.93em;
   }
+  .description {
+    font-size: 1.69em;
+  }
+
+  .task-wrap h2 {
+    font-size: 2.88em;
+  }
+  .mission-bg {
+    display: block;
+    position: absolute;
+    left: -70px;
+    bottom: 35px;
+    z-index: -1;
+    height: auto;
+    max-width: 715px;
+  }
+  .contacts {
+    flex-direction: row;
+  }
+  .contacts-wrap {
+    gap: 3vw;
+  }
+  .contacts h2,
+  .contacts-wrap {
+    width: 40%;
+  }
+  .footer-form {
+    flex-direction: row;
+  }
+
+  .form-container {
+    width: 70%;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1179px) {
+  .task-container article {
+    flex-direction: row;
+  }
+  .task-wrap h2 {
+    font-size: 1.4em;
+  }
+  .task-container article img {
+    width: 50%;
+  }
+}
+@media screen and (min-width: 1180px) {
+  .task-container article {
+    flex-direction: row;
+  }
+  .task-wrap h2 {
+    font-size: 2.23em;
+  }
+  .task-container article img {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1215px) {
+  .footer-form img {
+    display: block;
+    width: 100%;
+    max-width: 540px;
+    height: auto;
+  }
 }
 @media screen and (min-width: 1280px) {
   .mission-title-wrapper h3 {
@@ -327,5 +390,8 @@ footer {
     position: absolute;
     bottom: 24px;
     right: -90px;
+  }
+  .form-container {
+    width: 40%;
   }
 }
