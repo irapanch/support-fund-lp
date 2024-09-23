@@ -36,12 +36,7 @@
             <li class="btn"><a href="#support">Підтримати фонд</a></li>
           </ul>
           <!--  ======  BURGER BUTTON  ========= -->
-          <button
-            type="button"
-            class="header-mobile-menu-btn js-open-menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
+          <button type="button" class="header-mobile-menu-btn">
             <svg class="header-mobile-menu-icon" width="32" height="22">
               <use href="./images/icons.svg#icon-burger-1"></use>
             </svg>
@@ -203,7 +198,7 @@
             <h3>
               Щоб дізнаватися усі новини фестивалю, підпишися на нашу розсилку
             </h3>
-            <form action="./subscribe.html" class="contacts-form" method="post">
+            <form  class="contacts-form"  id="subscribeForm">
               <label>
                 <input
                   class="btn"
@@ -228,8 +223,9 @@
         </article>
       </div>
     </footer>
+    <!-- Модальне вікно мобільного меню -->
     <section class="mobile-menu-section">
-      <button type="button" class="btn-close">
+      <button type="button" class="btn-close js-close-mobile-menu">
         <svg class="header-mobile-menu-icon" width="32" height="22">
           <use href="./images/icons.svg#icon-close-modal"></use>
         </svg>
@@ -237,9 +233,13 @@
       <div class="mobile-menu-wrapper">
         <nav>
           <ul class="mobile-menu-list">
-            <li><a href="#main">Головна</a></li>
-            <li><a href="#tasks">З чим ми працюємо</a></li>
-            <li><a href="#contacts">Контакти</a></li>
+            <li class="js-close-mobile-menu"><a href="#main">Головна</a></li>
+            <li class="js-close-mobile-menu">
+              <a href="#tasks">З чим ми працюємо</a>
+            </li>
+            <li class="js-close-mobile-menu">
+              <a href="#contacts">Контакти</a>
+            </li>
           </ul>
         </nav>
         <div class="mobile-menu-contacts-wrap">
@@ -271,6 +271,23 @@
         </div>
       </div>
     </section>
+    <!-- Модальне вікно підписки -->
+<section id="modal" class="modal">
+  <div class="modal-content">
+    
+    
+    <button type="button" id="closeModal" class="btn-close close"></button>
+        <svg class="header-mobile-menu-icon" width="32" height="22">
+          <use href="./images/icons.svg#icon-close-modal"></use>
+        </svg>
+      </button>
+      <p>Ви підписалися на розсилку! Будь ласка, перевірте пошту</р>
+    <!-- <button id="closeModal" class="btn">Закрыть</button> -->
+  </div>
+</section>
+<div id="backdrop" class="backdrop"></div>
     <script src="./js/mobile-menu.js"></script>
+    <script src="./js/subscribe.js"></script>
+    
   </body>
 </html>
