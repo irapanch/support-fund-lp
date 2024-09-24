@@ -198,7 +198,7 @@
             <h3>
               Щоб дізнаватися усі новини фестивалю, підпишися на нашу розсилку
             </h3>
-            <form  class="contacts-form"  id="subscribeForm">
+            <form class="contacts-form" id="subscribeForm">
               <label>
                 <input
                   class="btn"
@@ -272,22 +272,19 @@
       </div>
     </section>
     <!-- Модальне вікно підписки -->
-<section id="modal" class="modal">
-  <div class="modal-content">
-    
-    
-    <button type="button" id="closeModal" class="btn-close close"></button>
-        <svg class="header-mobile-menu-icon" width="32" height="22">
-          <use href="./images/icons.svg#icon-close-modal"></use>
-        </svg>
-      </button>
-      <p>Ви підписалися на розсилку! Будь ласка, перевірте пошту</р>
-    <!-- <button id="closeModal" class="btn">Закрыть</button> -->
-  </div>
-</section>
-<div id="backdrop" class="backdrop"></div>
+    <section class="backdrop">
+      <div class="modal-content">
+        <button type="button" class="btn-close js-close-modal">
+          <svg class="header-mobile-menu-icon" width="16" height="14">
+            <use href="./images/icons.svg#icon-close-modal"></use>
+          </svg>
+        </button>
+        <p>Ви підписалися на розсилку!</p>
+        <p>Будь ласка, перевірте пошту</p>
+      </div>
+    </section>
+
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/subscribe.js"></script>
-    
   </body>
 </html>
