@@ -1,14 +1,18 @@
-document
-  .getElementById("subscribeForm")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Останавливаем отправку формы
+const form = document.getElementById("subscribeForm");
+form.addEventListener("submit", function (event) {
+  event.preventDefault(); // Останавливаем отправку формы
 
-    // Открываем модальное окно
-    document.getElementById("modalSubscribe").style.display = "flex";
-    document.getElementById("backdrop").style.display = "flex";
-    // Очищаем форму
-    event.target.reset();
-  });
+  const formData = new FormData(form);
+  // Вместо этого кода выполните логику отправки данных на сервер
+  for (let pair of formData.entries()) {
+    console.log(pair[0] + ": " + pair[1]);
+  }
+  // Открываем модальное окно
+  document.getElementById("modalSubscribe").style.display = "flex";
+  document.getElementById("backdrop").style.display = "flex";
+  // Очищаем форму
+  event.target.reset();
+});
 
 document
   .getElementById("modalSubscribeClose")

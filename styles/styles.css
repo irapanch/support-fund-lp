@@ -199,6 +199,8 @@ button {
   margin-top: 0.4em;
   margin-bottom: 0.8em;
   line-height: 0.7;
+
+  font-family: "Courier New", "Montserrat", sans-serif;
 }
 .counter-item {
   border-right: 2px solid #9ad2de;
